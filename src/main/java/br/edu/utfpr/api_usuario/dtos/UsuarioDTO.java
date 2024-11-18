@@ -19,5 +19,5 @@ public record UsuarioDTO(
 
         @NotNull(message = "Senha é obrigatória")
         @Size(min = 6,max = 10, message = "Senha deve ter entre 6 a 10 caracteres")
-        String password
+        String senha
 ){}
