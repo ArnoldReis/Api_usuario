@@ -33,7 +33,7 @@ public class UsuarioController {
 
         novoUsuario.setNome(usuarioDTO.nome());
         novoUsuario.setEmail(usuarioDTO.email());
-        novoUsuario.setSenha(usuarioDTO.senha());
+        novoUsuario.setPassword(usuarioDTO.password());
         novoUsuario.setCreatedAt(LocalDateTime.now());
 
         this.usuarioRepository.save(novoUsuario);
@@ -50,7 +50,7 @@ public class UsuarioController {
                     usuario.getId(),
                     usuario.getNome(),
                     usuario.getEmail(),
-                    usuario.getSenha()
+                    usuario.getPassword()
             );
             listaDTOs.add(usuarioDTO);
         }
@@ -67,7 +67,7 @@ public class UsuarioController {
                 usuario.getId(),
                 usuario.getNome(),
                 usuario.getEmail(),
-                usuario.getSenha()
+                usuario.getPassword()
         );
         return ResponseEntity.ok(usuarioDTO);
         } else {

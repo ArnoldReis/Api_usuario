@@ -29,7 +29,7 @@ public class Usuario {
     private String email;
 
     @NotNull
-    private String senha;
+    private String password;
 
     private LocalDateTime createdAt;
 }
